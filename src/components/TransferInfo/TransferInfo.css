@@ -1,0 +1,36 @@
+.transfer-info {
+    height: max-content;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    -webkit-box-shadow: 1px 1px 6px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 1px 1px 6px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 1px 1px 6px 0px rgba(34, 60, 80, 0.2);
+}
+
+.group {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.group:last-child {
+    margin-bottom: unset;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.currencies-wrapper, .transfers-wrapper {
+    border-radius: 6px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.transfers-wrapper {
+    flex-direction: column;
+}

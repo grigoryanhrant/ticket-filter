@@ -1,0 +1,29 @@
+.currency {
+    padding: 12px 20px;
+    text-transform: uppercase;
+    color: #7FC4F9;
+    font-weight: 700;
+    transition: 0.4s all;
+    border: 1px solid #EEF0F0;
+}
+
+.currency:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.currency:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.currency:hover {
+    background-color: #F2FCFF;
+    cursor: pointer;
+    border-color: #CCE7FC;
+}
+
+.selected-currency {
+    color: #fff;
+    background-color: #2196F3;
+}
