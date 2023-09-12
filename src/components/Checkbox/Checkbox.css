@@ -54,3 +54,9 @@ input[type=checkbox]:checked:after {
 .value {
     margin-left: 10px;
 }
+
+@media (max-width: 1024px) {
+    .value {
+        font-size: 14px;
+    }
+}

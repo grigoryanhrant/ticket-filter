@@ -1,3 +1,5 @@
 export interface Props {
-    currency: string;
+  currency: string;
+  activeCurrency: string;
+  changeCurrency: (currency: string) => void;
 }

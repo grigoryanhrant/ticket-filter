@@ -1,9 +1,32 @@
-import { Props } from "../Card/types.ts";
 import Card from "../Card/Card.tsx";
 import "./CardsList.css";
+import { useAppSelector } from "../../store/hooks.ts";
+import Loader from "../Loader/Loader.tsx";
+import { useEffect, useState } from "react";
+import { useUpdateCards } from "./useUpdateCards.ts";
 
-const CardsList = ({ cards }: Props) => {
-  const cardsRender = cards.map(
+const CardsList = () => {
+  const { cards } = useAppSelector((state) => state.transfers);
+  const { activeFilterParams } = useAppSelector((state) => state.transfers);
+
+  const [loading, setLoading] = useState(true);
+
+  const { updatedCards } = useUpdateCards({
+    cards,
+    activeFilterParams,
+  });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
+  const cardsRender = updatedCards?.map(
     ({
       origin,
       origin_name,
@@ -13,7 +36,6 @@ const CardsList = ({ cards }: Props) => {
       departure_time,
       arrival_date,
       arrival_time,
-      carrier,
       stops,
       price,
     }) => {
@@ -28,7 +50,6 @@ const CardsList = ({ cards }: Props) => {
           departure_time={departure_time}
           arrival_date={arrival_date}
           arrival_time={arrival_time}
-          carrier={carrier}
           stops={stops}
           price={price}
         />

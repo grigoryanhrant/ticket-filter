@@ -4,3 +4,16 @@
     flex-direction: column;
     margin-left: 40px;
 }
+
+@media (max-width: 1024px) {
+    .cards-flexbox {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cards-flexbox {
+        margin-left: unset;
+        margin-top: 20px;
+    }
+}

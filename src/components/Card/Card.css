@@ -1,14 +1,13 @@
 .card {
     background-color: #fff;
     border-radius: 8px;
-    padding: 20px;
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
     -webkit-box-shadow: 1px 1px 6px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 1px 1px 6px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 1px 1px 6px 0px rgba(34, 60, 80, 0.2);
     margin-bottom: 30px;
+    padding: 12px;
 }
 
 .card:last-child {
@@ -16,11 +15,17 @@
 }
 
 .left-side {
+    width: 100%;
+    max-width: 186px;
     border-right: 1px solid #F4F5F6;
+    padding: 18px;
 }
 
-.content-side {
-
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
 }
 
 .card-button {
@@ -30,4 +35,130 @@
     border-radius: 6px;
     display: flex;
     flex-direction: column;
+    font-weight: 500;
+}
+
+.logo-wrapper {
+    max-width: 120px;
+}
+
+.logo-wrapper > img {
+    width: 100%;
+    height: auto;
+}
+
+.content-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.time {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.time, .city {
+    font-weight: 400;
+    color: #4A4A4A;
+}
+
+.date {
+    color: #C0C5C6;
+}
+
+.content-divider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.airplane-icon-wrapper {
+    max-width: 40px;
+    width: 100%;
+    margin-top: 14px
+}
+
+.airplane-icon-wrapper > img {
+    width: 100%;
+    height: auto;
+}
+
+.stops {
+    color: #8C9598;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+    .card {
+
+    }
+
+    .logo-wrapper {
+        max-width: 100px;
+        margin: 0 auto
+    }
+
+    .left-side {
+        max-width: 155px;
+        padding: 4px;
+        border-right: unset;
+    }
+
+    .card-button {
+        padding: 2px 4px;
+        font-size: 13px;
+    }
+
+    .time, .date {
+        font-size: 15px;
+    }
+
+    .content {
+        padding: 12px;
+    }
+
+    .stops {
+        font-size: 12px;
+    }
+
+    .airplane-icon-wrapper {
+        max-width: 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        flex-direction: column-reverse;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: unset;
+    }
+
+    .content-divider {
+        align-items: flex-start;
+        margin: 14px 0;
+    }
+
+    .left-side {
+        max-width: 100%;
+        padding: unset;
+    }
+
+    .logo-wrapper {
+        display: none;
+    }
+
+    .card-button {
+        margin-top: 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    .card-button {
+        font-size: 16px;
+    }
 }

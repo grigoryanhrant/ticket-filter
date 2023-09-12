@@ -7,7 +7,13 @@ export interface ICard {
   departure_time: string;
   arrival_date: string;
   arrival_time: string;
-  carrier: string;
   stops: number;
   price: number;
+}
+
+export interface IFilterParams {
+  id: number;
+  checked: boolean;
+  value: string;
+  transfersNumber: number;
 }

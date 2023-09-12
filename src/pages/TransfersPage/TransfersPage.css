@@ -1,3 +1,10 @@
 .transfers-page {
     display: flex;
+    height: 100vh;
+}
+
+@media (max-width: 900px) {
+    .transfers-page {
+        flex-direction: column;
+    }
 }
