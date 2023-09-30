@@ -24,7 +24,6 @@ const Card = ({
     <div className={"card"}>
       <div className={"left-side"}>
         <div className={"logo-wrapper"}>
-          <img src={logo} alt="airlines" />
         </div>
         <div className={"card-button"}>
           <span>Купить</span>
