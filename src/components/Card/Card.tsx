@@ -1,6 +1,5 @@
 import { ICard } from "../../types.ts";
 import "./Card.css";
-import logo from "../../assets/images/airlines_logo.png";
 import icon from "../../assets/images/airplane-icon.png";
 
 import dayjs from "dayjs";
